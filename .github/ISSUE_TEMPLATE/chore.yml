@@ -1,0 +1,68 @@
+name: "Chore"
+description: Non-feature work — infrastructure, tooling, CI/CD, and dependency setup.
+title: "[CHORE] "
+labels: ["type:chore"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A **Chore** is technical work that enables features but delivers no direct user value.
+        Examples: Docker setup, GitHub Actions, Alembic config, dependency upgrades.
+
+  - type: input
+    id: task-id
+    attributes:
+      label: Task ID
+      description: Reference ID from the backlog (Sprint 1 infra tasks).
+      placeholder: "e.g. T-01.3"
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What needs to be done and why is it necessary?
+      placeholder: "e.g. Write docker-compose.yml with fastapi, postgres:16, and redis:7-alpine services."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: layer
+    attributes:
+      label: Layer
+      options:
+        - Infra
+        - CI/CD
+        - Tooling
+        - Backend
+        - Data
+    validations:
+      required: true
+
+  - type: input
+    id: estimate
+    attributes:
+      label: Estimate
+      placeholder: "e.g. 1h"
+    validations:
+      required: true
+
+  - type: input
+    id: depends-on
+    attributes:
+      label: Depends On
+      placeholder: "e.g. T-01.1 — or leave blank"
+    validations:
+      required: false
+
+  - type: textarea
+    id: definition-of-done
+    attributes:
+      label: Definition of Done
+      placeholder: |
+        - [ ] docker compose up starts all services cleanly
+        - [ ] No errors in container logs on startup
+    validations:
+      required: true
