@@ -47,7 +47,6 @@ body:
         - Frontend
         - Data
         - Infra
-        - CI/CD
     validations:
       required: true
 
@@ -55,14 +54,13 @@ body:
     id: module
     attributes:
       label: Module
-      description: Which application module does this task belong to?
+      description: Which application module does this feature belong to?
       options:
         - sessions
         - goals
         - assessments
         - analytics
-        - documents
-        - shared
+        - infra
     validations:
       required: true
 

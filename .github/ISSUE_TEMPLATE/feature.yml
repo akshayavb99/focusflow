@@ -50,8 +50,7 @@ body:
         - goals
         - assessments
         - analytics
-        - documents
-        - shared
+        - infra
     validations:
       required: true
 

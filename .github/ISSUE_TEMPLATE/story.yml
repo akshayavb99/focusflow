@@ -64,13 +64,13 @@ body:
     id: module
     attributes:
       label: Module
+      description: Which application module does this feature belong to?
       options:
         - sessions
         - goals
         - assessments
         - analytics
-        - documents
-        - shared
+        - infra
     validations:
       required: true
 
