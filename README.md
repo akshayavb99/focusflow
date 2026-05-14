@@ -1,2 +1,2 @@
 # focusflow
-A hobby project for tracking study sessions with least amount of effort
+A hobby project for tracking study sessions with lesser amount of effort
