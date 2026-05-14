@@ -29,9 +29,9 @@ body:
       required: true
 
   - type: textarea
-    id: user-stories
+    id: stories
     attributes:
-      label: Constituent User Stories
+      label: Constituent Stories
       description: List the story issue numbers once created. Update as you add them.
       placeholder: |
         - [ ] #0 US-05 · Start a timer
