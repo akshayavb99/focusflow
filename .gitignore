@@ -1,0 +1,84 @@
+# Claude Code Reviewer files and directories
+claude_review.sh
+CLAUDE.md
+.claude/
+
+# --- Security & Secrets ---
+# Crucial: Never commit your MASTER_KEY or API keys
+.env
+*.env
+.venv
+env/
+venv/
+ENV/
+*.key
+*.pem
+
+# --- Python / FastAPI ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# --- Database & Persistence ---
+# Local SQLite or Postgres socket files
+*.sqlite3
+*.db
+# Redis dump files
+dump.rdb
+appendonly.aof
+
+# --- AI & RAG ---
+# Local Ollama models or downloaded embeddings
+models/
+.ollama/
+*.bin
+*.onnx
+
+# --- Frontend & UI ---
+# Tailwind/CSS build artifacts
+node_modules/
+.npm
+package-lock.json
+static/css/main.css
+
+# --- Testing & Coverage ---
+.target/
+.pytest_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+.rspec
+
+# --- OS / IDE ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
