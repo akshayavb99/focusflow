@@ -10,30 +10,12 @@ body:
         A **Story** describes a capability from the user's perspective.
         Tasks are created as sub-issues beneath this story.
 
-  - type: input
-    id: story-id
-    attributes:
-      label: Story ID
-      description: Reference ID from the backlog document.
-      placeholder: "e.g. US-05"
-    validations:
-      required: true
-
-  - type: input
-    id: parent-feature
-    attributes:
-      label: Parent Feature
-      description: Issue number of the parent feature this story belongs to.
-      placeholder: "e.g. #12 — FEAT-02 Session Tracking"
-    validations:
-      required: true
-
   - type: textarea
-    id: story
+    id: description
     attributes:
-      label: Story
-      description: Written in standard user story format.
-      placeholder: "As a user, I want to [action] so that [benefit]."
+      label: description
+      description: What does this story accomplish?
+      placeholder: ""
     validations:
       required: true
 
@@ -42,63 +24,14 @@ body:
     attributes:
       label: Acceptance Criteria
       description: Specific, testable conditions that must be true for this story to be done.
-      placeholder: |
-        - [ ] Given I click Start, a timer begins and started_at is recorded in UTC
-        - [ ] Given I click Pause, the timer stops and accumulated duration is saved
-        - [ ] Given I close the browser, the timer state is recoverable from localStorage
+      placeholder: ""
     validations:
       required: true
-
-  - type: dropdown
-    id: priority
-    attributes:
-      label: Priority
-      options:
-        - P0 — Critical
-        - P1 — High
-        - P2 — Nice to have
-    validations:
-      required: true
-
-  - type: dropdown
-    id: module
-    attributes:
-      label: Module
-      description: Which application module does this feature belong to?
-      options:
-        - sessions
-        - goals
-        - assessments
-        - analytics
-        - infra
-    validations:
-      required: true
-
-  - type: input
-    id: story-points
-    attributes:
-      label: Story Points
-      description: Complexity estimate using Fibonacci scale (1, 2, 3, 5, 8, 13).
-      placeholder: "e.g. 5"
-    validations:
-      required: true
-
-  - type: textarea
-    id: tasks
-    attributes:
-      label: Constituent Tasks
-      description: List the task issue numbers once created. Update as you add them.
-      placeholder: |
-        - [ ] #0 T-02.1 · Session SQLModel
-        - [ ] #0 T-02.3 · POST /api/v1/sessions/start
-        - [ ] #0 T-02.8 · Alpine.js timer component
-    validations:
-      required: false
 
   - type: textarea
     id: notes
     attributes:
-      label: Notes
+      label: notes
       description: Any edge cases, dependencies on other stories, or implementation hints.
       placeholder: "Optional."
     validations:

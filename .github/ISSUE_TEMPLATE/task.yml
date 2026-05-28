@@ -10,102 +10,20 @@ body:
         A **Task** is one discrete technical unit of work scoped to a single layer.
         It is always a sub-issue of a Story — never standalone.
 
-  - type: input
-    id: task-id
-    attributes:
-      label: Task ID
-      description: Reference ID from the backlog document.
-      placeholder: "e.g. T-02.3"
-    validations:
-      required: true
-
-  - type: input
-    id: parent-story
-    attributes:
-      label: Parent Story
-      description: Issue number of the parent story this task belongs to.
-      placeholder: "e.g. #18 — US-05 Start a timer"
-    validations:
-      required: true
-
   - type: textarea
-    id: description
+    id: implementation-details
     attributes:
-      label: Task Description
+      label: implementation-details
       description: What exactly needs to be built or done? Be specific.
-      placeholder: "e.g. Write POST /api/v1/sessions/start endpoint — creates session record with started_at=now(), returns session_id."
+      placeholder: ""
     validations:
       required: true
-
-  - type: dropdown
-    id: layer
-    attributes:
-      label: Layer
-      description: Which technical layer does this task touch?
-      options:
-        - Backend
-        - Frontend
-        - Data
-        - Infra
-    validations:
-      required: true
-
-  - type: dropdown
-    id: module
-    attributes:
-      label: Module
-      description: Which application module does this feature belong to?
-      options:
-        - sessions
-        - goals
-        - assessments
-        - analytics
-        - infra
-    validations:
-      required: true
-
-  - type: input
-    id: estimate
-    attributes:
-      label: Estimate
-      description: Time estimate (in hours) for this task.
-      placeholder: "e.g. 1, 2, 3"
-    validations:
-      required: true
-
-  - type: input
-    id: depends-on
-    attributes:
-      label: Depends On
-      description: Task IDs or issue numbers that must be completed before this one.
-      placeholder: "e.g. T-02.1, #22 — or leave blank if none"
-    validations:
-      required: false
 
   - type: textarea
-    id: definition-of-done
+    id: success-criteria
     attributes:
-      label: Definition of Done
+      label: success-criteria
       description: How do you know this task is complete?
-      placeholder: |
-        - [ ] Endpoint returns 201 with session_id on valid input
-        - [ ] Returns 422 on missing subject_id
-        - [ ] pytest test covers happy path and validation error
-        - [ ] ruff reports zero warnings
+      placeholder: ""
     validations:
       required: true
-
-  - type: checkboxes
-    id: checklist
-    attributes:
-      label: Standard Checklist
-      description: Every task must pass these before closing.
-      options:
-        - label: pytest passes locally
-          required: false
-        - label: ruff reports zero warnings
-          required: false
-        - label: Tested via docker compose up
-          required: false
-        - label: No cross-module DB joins introduced
-          required: false
