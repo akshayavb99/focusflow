@@ -15,7 +15,7 @@ body:
     attributes:
       label: description
       description: What does this story accomplish?
-      placeholder: ""
+      placeholder: " "
     validations:
       required: true
 
@@ -24,7 +24,7 @@ body:
     attributes:
       label: Acceptance Criteria
       description: Specific, testable conditions that must be true for this story to be done.
-      placeholder: ""
+      placeholder: " "
     validations:
       required: true
 

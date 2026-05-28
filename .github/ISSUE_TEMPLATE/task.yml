@@ -15,7 +15,7 @@ body:
     attributes:
       label: implementation-details
       description: What exactly needs to be built or done? Be specific.
-      placeholder: ""
+      placeholder: " "
     validations:
       required: true
 
@@ -24,6 +24,6 @@ body:
     attributes:
       label: success-criteria
       description: How do you know this task is complete?
-      placeholder: ""
+      placeholder: " "
     validations:
       required: true
